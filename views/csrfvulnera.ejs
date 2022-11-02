@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSRF</title>
+    </head>
+    <body>
+        <div style="display: flex; align-items:baseline;">
+            <form action="/logout" method="get">
+                <input type="submit" value="Odjava">
+            </form>
+            <h1 style="margin-left: 100px;">CSRF vulnerable</h1>
+        </div>
+
+        <form action="/csrfvulnera/changePassword" method="post">
+            <label for="passwd">New pasword:</label>
+            <input type="text" id="passwd" name="passwd1" value="passwd">
+            <label for="passwdrpt">Confirm password:</label>
+            <input type="text" id="passwdrpt" name="passwd2" value="passwd">
+            <input type="submit" value="Submit">
+        </form>
+        <p>Klikni na <a href="http://localhost:8000/" >attacker.com</a></p>
+        <%  if(data) {%>
+            <p><%= data %></p>
+        <% } %>
+    </body>
+</html>
