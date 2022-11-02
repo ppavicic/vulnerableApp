@@ -89,7 +89,7 @@ app.get('/csrfnonvulnera', requiresAuth(), function (req, res) {
     })
 });
 
-app.post('/csrfvulnera/changePassword', requiresAuth(), function (req, res) {
+app.post('/csrfvulnera/changePassword', function (req, res) {
     result = undefined
     if(req.body.passwd1 === req.body.passwd2){
         result = "Nova lozinka je "+ req.body.passwd1
