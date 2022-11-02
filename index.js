@@ -21,21 +21,6 @@ app.set('view engine', 'ejs')
 
 const port = process.env.PORT || 3000;
 
-/*const config = {
-    authRequired: false,
-    idpLogout: true,
-    secret: process.env.SECRET,
-    baseURL: process.env.APP_URL || `https://localhost:${port}`,
-    clientID: process.env.CLIENT_ID,
-    issuerBaseURL: 'https://dev-q02guoproqbw6f6h.us.auth0.com',
-    clientSecret: process.env.CLIENT_SECRET,
-    authorizationParams: {
-        response_type: 'code',
-        //scope: "openid profile email"   
-    },
-};*/
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-
 const config = {
     authRequired: false,
     auth0Logout: true,
